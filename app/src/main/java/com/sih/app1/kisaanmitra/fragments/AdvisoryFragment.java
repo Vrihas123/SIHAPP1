@@ -48,7 +48,7 @@ public class AdvisoryFragment extends Fragment {
         progressBar =  view.findViewById(R.id.progress_blogs);
         recyclerViewBlogs.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerViewBlogs.setAdapter(advisoryAdapter);
-        //APICall();
+        APICall();
         return view;
     }
 

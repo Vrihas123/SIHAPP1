@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,8 +55,8 @@ public class AdvisoryAdapter extends RecyclerView.Adapter<AdvisoryAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int i) {
-            final AdvisoryData data = new AdvisoryData();
-            holder.txtTitle.setText(data.getTitle());
+            final AdvisoryData data = advisoryDataList.get(i);
+            holder.txtTitle.setText(Html.fromHtml(data.getTitle()));
         Glide.with(context).load(data.getImage_url()).listener(new RequestListener<Drawable>() {
             @Override
             public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {

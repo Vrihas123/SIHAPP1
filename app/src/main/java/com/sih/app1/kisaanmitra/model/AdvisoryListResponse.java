@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AdvisoryListResponse extends GenericResponse implements Serializable {
 
-    @SerializedName("advisory_list")
+    @SerializedName("data")
     @Expose
     private List<AdvisoryData> advisoryDataList;
 

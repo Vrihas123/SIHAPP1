@@ -20,10 +20,10 @@ android {
         production {
             applicationIdSuffix ""
             flavorDimensions "default"
-            buildConfigField("String", "BASE_URL", "\"https://ecell.nitrr.ac.in/\"")
+//            buildConfigField("String", "BASE_URL", "\"https://ecell.nitrr.ac.in/\"")
 //            buildConfigField("String", "BASE_URL", "\"http://www.mocky.io/\"")
 //            buildConfigField("String", "BASE_URL", "\"http://18.204.111.26/\"")
-//            buildConfigField("String", "BASE_URL", "\"http://ffd07236.ngrok.io/\"")
+            buildConfigField("String", "BASE_URL", "\"http://172.16.22.27:8000/\"")
             minSdkVersion 19
             applicationId 'com.competiton.pregnancy.kisaanmitraretailer'
             targetSdkVersion 28

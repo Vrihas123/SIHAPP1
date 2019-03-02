@@ -8,11 +8,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sih.app1.kisaanmitra.R;
+import com.sih.app1.kisaanmitra.model.ProductData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductFragment extends Fragment {
 
+    private List<ProductData> productDataList = new ArrayList<>();
+
     public ProductFragment() {
         // Required empty public constructor
+    }
+
+    public void setProductDataList(List<ProductData> productDataList) {
+        this.productDataList = productDataList;
     }
 
     public static ProductFragment newInstance() {
@@ -29,7 +39,9 @@ public class ProductFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product, container, false);
+        View view = inflater.inflate(R.layout.fragment_product, container, false);
+
+        return  view;
     }
 
 }

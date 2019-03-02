@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,8 +70,8 @@ public class AdvisoryDetailFragment extends DialogFragment {
         img = view.findViewById(R.id.img_detail_image);
         arrowBack = view.findViewById(R.id.arrow_dismiss_advisory_details);
         if (advisoryData != null) {
-            title.setText(advisoryData.getTitle());
-            desc.setText(advisoryData.getDescription());
+            title.setText(Html.fromHtml(advisoryData.getTitle()));
+            desc.setText(Html.fromHtml(advisoryData.getDescription()));
             Glide.with(getContext()).load(advisoryData.getImage_url()).into(img);
         }
         arrowBack.setOnClickListener(new View.OnClickListener() {

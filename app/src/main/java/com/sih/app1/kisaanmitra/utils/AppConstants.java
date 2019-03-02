@@ -7,7 +7,7 @@ public class AppConstants {
 
     //URL's
     public static final String ACCESS_TOKEN = "access_token";
-    public static final String REQUEST_BLOGS = "";
+    public static final String REQUEST_ADVISORY = "api/advices/all";
 
-
+    public static final String REQUEST_PRODUCTS = "";
 }

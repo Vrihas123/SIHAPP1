@@ -13,6 +13,7 @@ import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.sih.app1.kisaanmitra.R;
 import com.sih.app1.kisaanmitra.fragments.AdvisoryFragment;
 import com.sih.app1.kisaanmitra.fragments.NewsFeedFragment;
+import com.sih.app1.kisaanmitra.fragments.ProductTypeFragment;
 import com.sih.app1.kisaanmitra.fragments.ProfileFragment;
 import com.sih.app1.kisaanmitra.fragments.ProductFragment;
 import com.sih.app1.kisaanmitra.fragments.SchemesFragment;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         createFragment(new AdvisoryFragment(), "AdvisoryFragment", false);
                         return true;
                     case R.id.products:
-                        createFragment(new ProductFragment(), "ProductFragment", false);
+                        createFragment(new ProductTypeFragment(), "ProductTypeFragment", false);
                         return true;
                     case R.id.profile:
                         createFragment(new ProfileFragment(), "ProfileFragment", false);
