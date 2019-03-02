@@ -24,7 +24,7 @@ android {
 //            buildConfigField("String", "BASE_URL", "\"http://192.168.43.55:8000/\"")
 //            buildConfigField("String", "BASE_URL", "\"http://www.mocky.io/\"")
 //            buildConfigField("String", "BASE_URL", "\"http://18.204.111.26/\"")
-            buildConfigField("String", "BASE_URL", "\"http://172.16.22.27:8000/\"")
+            buildConfigField("String", "BASE_URL", "\"http://10.42.0.218:8000/\"")
             minSdkVersion 19
             applicationId 'com.competiton.pregnancy.kisaanmitraretailer'
             targetSdkVersion 28
@@ -70,6 +70,9 @@ dependencies {
 
     // DataBind
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.1'
+
+    // TinyDB tracer keys
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.3'
 
     // View Injection
     implementation 'com.android.support:support-v4:28.0.0'

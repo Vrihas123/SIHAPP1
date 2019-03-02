@@ -172,7 +172,7 @@ public class NewsFeedFragment extends Fragment {
     };
 
     private void apiCall(){
-        ApiServices services = AppClient.getInstance().createService(ApiServices.class);
+        ApiServices services = AppClient.getInstance().createServiceWithAuth(ApiServices.class, getContext());
         Call<NewsResponse> call = services.getNews(query);
         Log.e("Api call ====", query);
         call.enqueue(new Callback<NewsResponse>() {

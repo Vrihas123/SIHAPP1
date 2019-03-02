@@ -1,5 +1,6 @@
 package com.sih.app1.kisaanmitra.restapi;
 
+import android.content.Context;
 import android.util.Log;
 
 
@@ -42,13 +43,14 @@ public class AppClient {
         return retrofit.create(serviceClass);
     }
 
-    public <S> S createServiceWithAuth(Class<S> serviceClass) {
+    public <S> S createServiceWithAuth(Class<S> serviceClass, Context context) {
+        final TinyDB db = new TinyDB(context);
         Interceptor interceptorReq = new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request().newBuilder()
-                        .addHeader("Token", TinyDB.getInstance().getString(AppConstants.ACCESS_TOKEN)).build();
-                Log.e("Header====", TinyDB.getInstance().getString(AppConstants.ACCESS_TOKEN));
+                        .addHeader("token", db.getString(AppConstants.ACCESS_TOKEN)).build();
+                Log.e("Header====", db.getString(AppConstants.ACCESS_TOKEN));
                 return chain.proceed(request);
             }
         };

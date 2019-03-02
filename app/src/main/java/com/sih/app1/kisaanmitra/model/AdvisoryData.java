@@ -3,6 +3,7 @@ package com.sih.app1.kisaanmitra.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.sih.app1.kisaanmitra.model.Authrization.GenericResponse;
 
 import java.io.Serializable;
 
