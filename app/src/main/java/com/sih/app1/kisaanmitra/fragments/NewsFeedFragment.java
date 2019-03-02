@@ -1,0 +1,40 @@
+package com.sih.app1.kisaanmitra.fragments;
+
+import android.content.Context;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.sih.app1.kisaanmitra.R;
+
+
+public class NewsFeedFragment extends Fragment {
+
+
+    public NewsFeedFragment() {
+        // Required empty public constructor
+    }
+
+    public static NewsFeedFragment newInstance() {
+        NewsFeedFragment fragment = new NewsFeedFragment();
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_news_feed, container, false);
+        return view;
+    }
+
+
+}
