@@ -1,0 +1,280 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.sih.app1.kisaanmitra.fragments.ProductTypeFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="PRODUCTS"
+           android:layout_marginTop="8dp"
+           android:layout_gravity="center"
+           android:textColor="@color/black"
+           android:textSize="24dp"
+           android:textStyle="bold"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_seeds"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_height="250dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/seed_img"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#80000000">
+
+        </View>
+
+        <TextView
+            android:text="Seeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:elevation="2dp"
+            />
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/seed_loader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+       <android.support.v7.widget.CardView
+           android:id="@+id/card_manure"
+           android:layout_width="match_parent"
+           app:cardCornerRadius="8dp"
+           app:cardElevation="8dp"
+           android:layout_marginStart="16dp"
+           android:layout_marginEnd="16dp"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="8dp"
+           android:layout_height="250dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <ImageView
+                   android:id="@+id/manure_img"
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   android:scaleType="fitXY"/>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   android:background="#80000000">
+
+               </View>
+
+               <TextView
+                   android:text="Manure"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:textSize="24dp"
+                   android:textStyle="bold"
+                   android:layout_centerInParent="true"
+                   android:gravity="center"
+                   android:elevation="2dp"
+                   />
+               <com.wang.avi.AVLoadingIndicatorView
+                   android:id="@+id/manure_loader"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:elevation="2dp"
+                   style="@style/AVLoadingIndicatorView"
+                   android:layout_centerInParent="true"/>
+
+           </RelativeLayout>
+       </android.support.v7.widget.CardView>
+
+       <android.support.v7.widget.CardView
+           android:id="@+id/card_vehicles"
+           android:layout_width="match_parent"
+           app:cardCornerRadius="8dp"
+           app:cardElevation="8dp"
+           android:layout_marginStart="16dp"
+           android:layout_marginEnd="16dp"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="8dp"
+           android:layout_height="250dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <ImageView
+                   android:id="@+id/vehicles_img"
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   android:scaleType="fitXY"/>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   android:background="#80000000">
+
+               </View>
+
+               <TextView
+                   android:text="Vehicles"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:textSize="24dp"
+                   android:textStyle="bold"
+                   android:layout_centerInParent="true"
+                   android:gravity="center"
+                   android:elevation="2dp"
+                   />
+               <com.wang.avi.AVLoadingIndicatorView
+                   android:id="@+id/vehicle_loader"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:elevation="2dp"
+                   style="@style/AVLoadingIndicatorView"
+                   android:layout_centerInParent="true"/>
+
+           </RelativeLayout>
+       </android.support.v7.widget.CardView>
+
+       <android.support.v7.widget.CardView
+           android:id="@+id/card_equipments"
+           android:layout_width="match_parent"
+           app:cardCornerRadius="8dp"
+           app:cardElevation="8dp"
+           android:layout_marginStart="16dp"
+           android:layout_marginEnd="16dp"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="8dp"
+           android:layout_height="250dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <ImageView
+                   android:id="@+id/equipments_img"
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   android:scaleType="fitXY"/>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   android:background="#80000000">
+
+               </View>
+
+               <TextView
+                   android:text="Equipments"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:textSize="24dp"
+                   android:textStyle="bold"
+                   android:layout_centerInParent="true"
+                   android:gravity="center"
+                   android:elevation="2dp"
+                   />
+
+               <com.wang.avi.AVLoadingIndicatorView
+                   android:id="@+id/equipment_loader"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:elevation="2dp"
+                   style="@style/AVLoadingIndicatorView"
+                   android:layout_centerInParent="true"/>
+
+           </RelativeLayout>
+       </android.support.v7.widget.CardView>
+
+       <android.support.v7.widget.CardView
+           android:id="@+id/card_others"
+           android:layout_width="match_parent"
+           app:cardCornerRadius="8dp"
+           app:cardElevation="8dp"
+           android:layout_marginStart="16dp"
+           android:layout_marginEnd="16dp"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="80dp"
+           android:layout_height="250dp">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <ImageView
+                   android:id="@+id/others_img"
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   android:scaleType="fitXY"/>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   android:background="#80000000">
+
+               </View>
+
+               <TextView
+                   android:text="Others"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:textSize="24dp"
+                   android:textStyle="bold"
+                   android:layout_centerInParent="true"
+                   android:gravity="center"
+                   android:elevation="2dp"
+                   />
+
+               <com.wang.avi.AVLoadingIndicatorView
+                   android:id="@+id/others_loader"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:elevation="2dp"
+                   style="@style/AVLoadingIndicatorView"
+                   android:layout_centerInParent="true"/>
+
+           </RelativeLayout>
+       </android.support.v7.widget.CardView>
+
+
+   </LinearLayout>
+</ScrollView>

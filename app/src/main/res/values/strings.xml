@@ -2,12 +2,19 @@
     <string name="app_name">KisaanMitra</string>
     <string name="title_news">News</string>
     <string name="title_schemes">Schemes</string>
-    <string name="title_blogs">Blogs</string>
+    <string name="title_advisor">Advisor</string>
     <string name="title_ecommerce">Products</string>
-    <string name="title_suggestion">Suggestions</string>
+    <string name="title_profile">Profile</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="something_went_wrong">!!something went wrong!!</string>
+    
+    <string name="seed_image">https://pixabay.com/photos/flax-seed-seeds-eat-healthy-bowl-1274944/</string>
+    <string name="manure_image">https://pixabay.com/photos/g%C3%BCllefa%C3%9F-g%C3%BClle-liquid-manure-1302596/</string>
+    <string name="vehicles_image">https://pixabay.com/photos/tractor-grain-mixer-rural-farm-385681/</string>
+    <string name="equipment_image">https://pixabay.com/photos/red-tractor-vintage-antique-1706144/</string>
+    <string name="other_image">https://pixabay.com/photos/haymaking-agriculture-hay-2755356/</string>
 
     <string name="news_1_title">Farmers</string>
     <string name="news_2_title">Agriculture</string>

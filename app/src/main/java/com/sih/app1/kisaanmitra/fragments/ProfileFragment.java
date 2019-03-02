@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import com.sih.app1.kisaanmitra.R;
 
 
-public class SuggestionFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
 
-    public SuggestionFragment() {
+    public ProfileFragment() {
         // Required empty public constructor
     }
 
@@ -22,7 +22,7 @@ public class SuggestionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_suggestion, container, false);
+        View view =  inflater.inflate(R.layout.fragment_profile, container, false);
         return view;
     }
 

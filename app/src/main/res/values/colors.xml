@@ -7,6 +7,7 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="bgBottomNavigation">#263238</color>
+    <color name="unselected_text_color">#bdbdbd</color>
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#819ca9</color>

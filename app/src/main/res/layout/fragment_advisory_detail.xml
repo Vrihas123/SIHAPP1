@@ -1,0 +1,60 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/advisory_gradient_bg"
+    tools:context="com.sih.app1.kisaanmitra.fragments.AdvisoryDetailFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/arrow_dismiss_advisory_details"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_expand_more"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"/>
+
+
+        <TextView
+            android:id="@+id/txt_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/arrow_dismiss_advisory_details"
+            android:text="sample title"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:gravity="center"
+            android:textSize="24dp"/>
+
+        <ImageView
+            android:id="@+id/img_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_below="@+id/txt_detail_title"/>
+
+        <TextView
+            android:id="@+id/txt_detail_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_detail_image"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="18dp"
+            android:text="sample description"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

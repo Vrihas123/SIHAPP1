@@ -20,10 +20,11 @@ android {
         production {
             applicationIdSuffix ""
             flavorDimensions "default"
-            buildConfigField("String", "BASE_URL", "\"http://192.168.43.55:8000/\"")
+//            buildConfigField("String", "BASE_URL", "\"https://ecell.nitrr.ac.in/\"")
+//            buildConfigField("String", "BASE_URL", "\"http://192.168.43.55:8000/\"")
 //            buildConfigField("String", "BASE_URL", "\"http://www.mocky.io/\"")
 //            buildConfigField("String", "BASE_URL", "\"http://18.204.111.26/\"")
-//            buildConfigField("String", "BASE_URL", "\"http://ffd07236.ngrok.io/\"")
+            buildConfigField("String", "BASE_URL", "\"http://172.16.22.27:8000/\"")
             minSdkVersion 19
             applicationId 'com.competiton.pregnancy.kisaanmitraretailer'
             targetSdkVersion 28
@@ -56,6 +57,7 @@ dependencies {
 
     //Other
     implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.2'
+    implementation 'com.wang.avi:library:2.1.3'
 
     // Networking
     implementation 'com.google.code.gson:gson:2.8.2'
