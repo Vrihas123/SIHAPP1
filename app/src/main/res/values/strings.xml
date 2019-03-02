@@ -9,7 +9,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="something_went_wrong">!!something went wrong!!</string>
-    
+
     <string name="seed_image">https://pixabay.com/photos/flax-seed-seeds-eat-healthy-bowl-1274944/</string>
     <string name="manure_image">https://pixabay.com/photos/g%C3%BCllefa%C3%9F-g%C3%BClle-liquid-manure-1302596/</string>
     <string name="vehicles_image">https://pixabay.com/photos/tractor-grain-mixer-rural-farm-385681/</string>

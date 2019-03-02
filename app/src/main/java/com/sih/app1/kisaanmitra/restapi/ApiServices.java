@@ -1,11 +1,17 @@
 package com.sih.app1.kisaanmitra.restapi;
 import com.sih.app1.kisaanmitra.model.AdvisoryListResponse;
+import com.sih.app1.kisaanmitra.model.Authrization.AuthenticationResponse;
+import com.sih.app1.kisaanmitra.model.Authrization.GenericResponse;
+import com.sih.app1.kisaanmitra.model.Authrization.LoginRequest;
+import com.sih.app1.kisaanmitra.model.Authrization.RegisterRequest;
 import com.sih.app1.kisaanmitra.model.ProductListResponse;
 import com.sih.app1.kisaanmitra.model.News.NewsResponse;
 import com.sih.app1.kisaanmitra.utils.AppConstants;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface ApiServices {
@@ -19,8 +25,8 @@ public interface ApiServices {
 
     @GET(AppConstants.NEWS_URL)
     Call<NewsResponse> getNews(@Query("query") String query);
-//    @POST(AppConstants.SIGN_UP_URL)
-//    Call<AuthenticationResponse> sendRegisterDetails(@Body UserDetails userDetails);
+    @POST(AppConstants.SIGN_UP_URL)
+    Call<GenericResponse> requestRegister(@Body RegisterRequest registerRequest);
 //
 //    @POST(AppConstants.SEND_OTP_URL)
 //    Call<SendOtpResponse> sendMobileNo(@Body otpSendNumber otpSendNumber);
@@ -52,8 +58,8 @@ public interface ApiServices {
 //    @GET(AppConstants.EVENTS_URL)
 //    Call<EventsResponse> getEventsResponse();
 //
-//    @POST(AppConstants.SIGN_IN_URL)
-//    Call<LoginResponse> sendLoginDetails(@Body LoginDetails loginDetails);
+    @POST(AppConstants.SIGN_IN_URL)
+    Call<AuthenticationResponse> requestLogin(@Body LoginRequest loginRequest);
 //
 //    @GET(AppConstants.SPONSOR_URL)
 //    Call<SponsorsResponse> getSponsorsResponce();
