@@ -17,10 +17,12 @@ import com.sih.app1.kisaanmitra.fragments.ProductTypeFragment;
 import com.sih.app1.kisaanmitra.fragments.ProfileFragment;
 import com.sih.app1.kisaanmitra.fragments.ProductFragment;
 import com.sih.app1.kisaanmitra.fragments.SchemesFragment;
+import com.sih.app1.kisaanmitra.fragments.NewsFeedFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationViewEx navigationView;
+    private NewsFeedFragment newsFeedFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (menuItem.getItemId()){
                     case R.id.news_feed:
-                        createFragment(new NewsFeedFragment(), "NewsFeedFragment", false);
-                        return true;
+
+                        newsFeedFragment = NewsFeedFragment.newInstance();
+                        createFragment(newsFeedFragment, "Open News", true);
+                        break;
                     case R.id.schemes:
                         createFragment(new SchemesFragment(), "SchemesFragment", false);
                         return true;

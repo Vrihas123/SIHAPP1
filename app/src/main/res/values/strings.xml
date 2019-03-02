@@ -16,4 +16,9 @@
     <string name="equipment_image">https://pixabay.com/photos/red-tractor-vintage-antique-1706144/</string>
     <string name="other_image">https://pixabay.com/photos/haymaking-agriculture-hay-2755356/</string>
 
+    <string name="news_1_title">Farmers</string>
+    <string name="news_2_title">Agriculture</string>
+    <string name="news_3_title">Crops</string>
+    <string name="news_4_title">Prices</string>
+
 </resources>

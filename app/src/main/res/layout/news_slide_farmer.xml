@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/farmer"/>
+
+    <RelativeLayout
+        android:id="@+id/rlHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="56dp"
+        android:layout_marginBottom="100dp">
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="5dp"
+            android:layout_height="120dp"
+            android:background="#ffd600"
+            />
+
+        <TextView
+            android:id="@+id/tvFirstNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This section contains news on Farmer"
+            android:layout_toRightOf="@+id/viewLine"
+            android:textSize="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlHeading"
+        android:layout_marginLeft="56dp"
+        android:text="The Hindu"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="56dp"
+        android:text="02/03/2019"
+        android:textColor="@color/colorAccent"
+        android:textSize="16dp"/>
+
+</RelativeLayout>
