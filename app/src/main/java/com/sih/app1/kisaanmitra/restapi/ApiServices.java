@@ -2,7 +2,7 @@ package com.sih.app1.kisaanmitra.restapi;
 
 public interface ApiServices {
 
-//    @POST(AppConstants.SIGN_UP_URL)
+//    @POST(AppConstants.SIGN_UP_URL)git
 //    Call<AuthenticationResponse> sendRegisterDetails(@Body UserDetails userDetails);
 //
 //    @POST(AppConstants.SEND_OTP_URL)
