@@ -3,11 +3,13 @@ package com.sih.app1.kisaanmitra.model.News;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.sih.app1.kisaanmitra.model.GenericResponse;
 
 import java.io.Serializable;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class NewsResponse implements Serializable {
+public class NewsResponse extends GenericResponse implements Serializable {
 
     @SerializedName("status")
     @Expose
@@ -19,7 +21,7 @@ public class NewsResponse implements Serializable {
 
     @SerializedName("articles")
     @Expose
-    private ArticlesResponse articlesResponse;
+    private List<ArticlesResponse> articlesResponse;
 
     public String getStatus() {
         return status;
@@ -37,11 +39,12 @@ public class NewsResponse implements Serializable {
         this.totalResults = totalResults;
     }
 
-    public ArticlesResponse getArticlesResponse() {
+    public List<ArticlesResponse> getArticlesResponse() {
         return articlesResponse;
     }
 
-    public void setArticlesResponse(ArticlesResponse articlesResponse) {
+    public void setArticlesResponse(List<ArticlesResponse> articlesResponse) {
         this.articlesResponse = articlesResponse;
     }
+
 }

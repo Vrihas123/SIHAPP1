@@ -9,4 +9,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="news_1_title">Farmers</string>
+    <string name="news_2_title">Agriculture</string>
+    <string name="news_3_title">Crops</string>
+    <string name="news_4_title">Prices</string>
+
 </resources>

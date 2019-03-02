@@ -20,7 +20,7 @@ android {
         production {
             applicationIdSuffix ""
             flavorDimensions "default"
-            buildConfigField("String", "BASE_URL", "\"https://ecell.nitrr.ac.in/\"")
+            buildConfigField("String", "BASE_URL", "\"http://192.168.43.55:8000/\"")
 //            buildConfigField("String", "BASE_URL", "\"http://www.mocky.io/\"")
 //            buildConfigField("String", "BASE_URL", "\"http://18.204.111.26/\"")
 //            buildConfigField("String", "BASE_URL", "\"http://ffd07236.ngrok.io/\"")

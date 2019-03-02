@@ -37,6 +37,10 @@ public class ArticlesResponse implements Serializable {
     @Expose
     private String content;
 
+    @SerializedName("source")
+    @Expose
+    private SourceResponse source;
+
     public String getAuthor() {
         return author;
     }
@@ -91,5 +95,13 @@ public class ArticlesResponse implements Serializable {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public SourceResponse getSource() {
+        return source;
+    }
+
+    public void setSource(SourceResponse source) {
+        this.source = source;
     }
 }
