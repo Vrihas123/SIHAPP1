@@ -10,7 +10,6 @@
 
     <style name="ProgressDialog">
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:fontFamily">@font/Comfortaa-Regular</item>
     </style>
 
 </resources>

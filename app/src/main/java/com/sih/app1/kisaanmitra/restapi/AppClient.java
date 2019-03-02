@@ -1,11 +1,11 @@
 package com.sih.app1.kisaanmitra.restapi;
 
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 
 import com.sih.app1.kisaanmitra.BuildConfig;
-import com.sih.app1.kisaanmitra.utils.PrefUtils;
+import com.sih.app1.kisaanmitra.utils.AppConstants;
+import com.sih.app1.kisaanmitra.utils.TinyDB;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +21,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class AppClient {
 
     private static AppClient mInstance;
-    private static PrefUtils prefUtils;
 
     private AppClient() {
     }
@@ -43,15 +42,13 @@ public class AppClient {
         return retrofit.create(serviceClass);
     }
 
-    public <S> S createServiceWithAuth(Class<S> serviceClass, final AppCompatActivity activity) {
-        prefUtils = new PrefUtils(activity);
+    public <S> S createServiceWithAuth(Class<S> serviceClass) {
         Interceptor interceptorReq = new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request().newBuilder()
-                        .addHeader("authId", prefUtils.getAccessToken()).build();
-
-                Log.e("Header====",   prefUtils.getAccessToken()  );
+                        .addHeader("Token", TinyDB.getInstance().getString(AppConstants.ACCESS_TOKEN)).build();
+                Log.e("Header====", TinyDB.getInstance().getString(AppConstants.ACCESS_TOKEN));
                 return chain.proceed(request);
             }
         };
