@@ -39,4 +39,5 @@ public class AppConstants {
     public static final String REQUEST_ADVISORY = "api/advices/all";
 
     public static final String REQUEST_PRODUCTS = "";
+    public static final String REQUEST_PRODUCTS_AVAILABILITY = "";
 }

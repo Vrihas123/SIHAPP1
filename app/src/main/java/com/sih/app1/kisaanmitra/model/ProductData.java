@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 public class ProductData implements Serializable {
 
-    @SerializedName("id")
+    @SerializedName("product_id")
     private int id;
 
     @SerializedName("name")

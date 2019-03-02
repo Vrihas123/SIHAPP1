@@ -161,7 +161,7 @@ public class ProductTypeFragment extends Fragment {
                         filterDataList.add(dataList.get(i));
                     }
                 }
-                ProductFragment productFragment = ProductFragment.newInstance();
+                ProductFragment productFragment = ProductFragment.newInstance("Seeds");
                 productFragment.setProductDataList(filterDataList);
                 ((MainActivity)getActivity()).createFragment(productFragment, "ProductFragment", true);
             }
@@ -178,7 +178,7 @@ public class ProductTypeFragment extends Fragment {
                     }
                 }
 
-                ProductFragment productFragment = ProductFragment.newInstance();
+                ProductFragment productFragment = ProductFragment.newInstance("Manures");
                 productFragment.setProductDataList(filterDataList);
                 ((MainActivity)getActivity()).createFragment(productFragment, "ProductFragment", true);
             }
@@ -195,7 +195,7 @@ public class ProductTypeFragment extends Fragment {
                     }
                 }
 
-                ProductFragment productFragment = ProductFragment.newInstance();
+                ProductFragment productFragment = ProductFragment.newInstance("Vehicles");
                 productFragment.setProductDataList(filterDataList);
                 ((MainActivity)getActivity()).createFragment(productFragment, "ProductFragment", true);
             }
@@ -212,7 +212,7 @@ public class ProductTypeFragment extends Fragment {
                     }
                 }
 
-                ProductFragment productFragment = ProductFragment.newInstance();
+                ProductFragment productFragment = ProductFragment.newInstance("Equipments");
                 productFragment.setProductDataList(filterDataList);
                 ((MainActivity)getActivity()).createFragment(productFragment, "ProductFragment", true);
             }
@@ -229,7 +229,7 @@ public class ProductTypeFragment extends Fragment {
                     }
                 }
 
-                ProductFragment productFragment = ProductFragment.newInstance();
+                ProductFragment productFragment = ProductFragment.newInstance("Miscellaneous");
                 productFragment.setProductDataList(filterDataList);
                 ((MainActivity)getActivity()).createFragment(productFragment, "ProductFragment", true);
             }
