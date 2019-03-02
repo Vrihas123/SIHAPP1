@@ -1,4 +1,4 @@
-package com.sih.app1.kisaanmitra.model;
+package com.sih.app1.kisaanmitra.model.Authrization;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.gson.annotations.Expose;
