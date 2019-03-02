@@ -20,8 +20,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@color/bgBottomNavigation"
-        app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"
+        app:itemIconTint="@color/bottom_nav_color"
+        android:foreground="?attr/selectableItemBackground"
+        app:itemTextColor="@color/bottom_nav_color"
         app:menu="@menu/navigation">
     </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>>
 

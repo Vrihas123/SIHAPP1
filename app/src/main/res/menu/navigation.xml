@@ -5,7 +5,8 @@
     <item
         android:id="@+id/news_feed"
         android:title="@string/title_news"
-        android:enabled="true" >
+        android:enabled="true"
+        android:icon="@drawable/ic_public">
 
     </item>
 
@@ -13,23 +14,16 @@
     <item
         android:id="@+id/schemes"
         android:title="@string/title_schemes"
-        android:enabled="true" >
+        android:enabled="true"
+        android:icon="@drawable/ic_business">
 
     </item>
 
 
     <item
-        android:id="@+id/blogs"
-        android:title="@string/title_blogs"
-        android:icon="@drawable/ic_local_florist"
-        android:enabled="true" >
-
-    </item>
-
-
-    <item
-        android:id="@+id/suggestions"
-        android:title="@string/title_suggestion"
+        android:id="@+id/advisor"
+        android:title="@string/title_advisor"
+        android:icon="@drawable/ic_people"
         android:enabled="true" >
 
     </item>
@@ -38,7 +32,17 @@
     <item
         android:id="@+id/products"
         android:title="@string/title_ecommerce"
-        android:enabled="true" >
+        android:enabled="true"
+        android:icon="@drawable/ic_local_florist">
+    </item>
+
+
+    <item
+        android:id="@+id/profile"
+        android:title="@string/title_profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_person">
+
     </item>
 
 

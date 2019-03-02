@@ -9,21 +9,27 @@ import android.view.ViewGroup;
 
 import com.sih.app1.kisaanmitra.R;
 
+public class ProductFragment extends Fragment {
 
-public class BlogsFragment extends Fragment {
-
-
-    public BlogsFragment() {
+    public ProductFragment() {
         // Required empty public constructor
     }
 
+    public static ProductFragment newInstance() {
+        ProductFragment fragment = new ProductFragment();
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_blogs, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_product, container, false);
     }
 
 }

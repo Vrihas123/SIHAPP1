@@ -4,12 +4,18 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.sih.app1.kisaanmitra.R;
+import com.sih.app1.kisaanmitra.fragments.AdvisoryFragment;
+import com.sih.app1.kisaanmitra.fragments.NewsFeedFragment;
+import com.sih.app1.kisaanmitra.fragments.ProfileFragment;
+import com.sih.app1.kisaanmitra.fragments.ProductFragment;
+import com.sih.app1.kisaanmitra.fragments.SchemesFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,22 +26,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialize();
+        loadFragment(new NewsFeedFragment());
         navigationView.enableShiftingMode(false);
         navigationView.enableItemShiftingMode(false);
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
                 switch (menuItem.getItemId()){
                     case R.id.news_feed:
-                        break;
+                        createFragment(new NewsFeedFragment(), "NewsFeedFragment", false);
+                        return true;
                     case R.id.schemes:
-                        break;
-                    case R.id.blogs:
-                        break;
-                    case R.id.suggestions:
-                        break;
+                        createFragment(new SchemesFragment(), "SchemesFragment", false);
+                        return true;
+                    case R.id.advisor:
+                        createFragment(new AdvisoryFragment(), "AdvisoryFragment", false);
+                        return true;
                     case R.id.products:
-                        break;
+                        createFragment(new ProductFragment(), "ProductFragment", false);
+                        return true;
+                    case R.id.profile:
+                        createFragment(new ProfileFragment(), "ProfileFragment", false);
+                        return true;
                 }
                 return false;
             }
@@ -61,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.commitAllowingStateLoss();
             }
         }
+    }
+
+    private void loadFragment(Fragment fragment) {
+        // load fragment
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 }
