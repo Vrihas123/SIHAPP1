@@ -1,8 +1,33 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout
+    android:id="@+id/rlParent"
     android:layout_height="match_parent"
-    tools:context="com.sih.app1.kisaanmitra.fragments.NewsFeedFragment">
+    android:layout_width="match_parent"
+    android:elevation="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvNewsCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Farmers"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvNewsCategory"
+        android:layout_marginLeft="24dp"
+        android:gravity="left"
+        android:orientation="horizontal"/>
+
+</RelativeLayout>

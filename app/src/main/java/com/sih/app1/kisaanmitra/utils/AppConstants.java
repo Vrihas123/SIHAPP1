@@ -14,7 +14,7 @@ public class AppConstants {
 //    public static final String VERIFY_OTP_URL ="verify_otp/ ";
 //    public static final String MESSAGE_URL = "message/";
 //    public static final String SIGN_IN_URL = "applogin/";
-//    public static final String EVENTS_URL = "events/list/";
+    public static final String NEWS_URL = "api/news";
 //    public static final String SPONSOR_URL ="sponsors/list/";
 //    public static final String SPLASHSCREEN_URL ="is_update_available/";
 //    public static final String RETRY_OTP_URL = "retry_otp/";

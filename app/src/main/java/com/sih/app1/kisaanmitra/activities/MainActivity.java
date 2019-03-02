@@ -10,10 +10,12 @@ import android.view.MenuItem;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.sih.app1.kisaanmitra.R;
+import com.sih.app1.kisaanmitra.fragments.NewsFeedFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationViewEx navigationView;
+    private NewsFeedFragment newsFeedFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
                     case R.id.news_feed:
+                        newsFeedFragment = NewsFeedFragment.newInstance();
+                        createFragment(newsFeedFragment, "Open News", true);
                         break;
                     case R.id.schemes:
                         break;
