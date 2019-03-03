@@ -155,13 +155,12 @@ public class ProductTypeFragment extends Fragment {
         cardSeeds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                filterDataList.clear();
                 for (i=0; i<dataList.size(); i++) {
                     if (dataList.get(i).getProduct_type().equals("SEED")) {
                         filterDataList.add(dataList.get(i));
                     }
                 }
-                ProductFragment productFragment = ProductFragment.newInstance();
+                ProductFragment productFragment = ProductFragment.newInstance("Seeds");
                 productFragment.setProductDataList(filterDataList);
                 ((MainActivity)getActivity()).createFragment(productFragment, "ProductFragment", true);
             }
@@ -171,14 +170,13 @@ public class ProductTypeFragment extends Fragment {
         cardManure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                filterDataList.clear();
                 for (i=0; i<dataList.size(); i++) {
                     if (dataList.get(i).getProduct_type().equals("MANURE")) {
                         filterDataList.add(dataList.get(i));
                     }
                 }
 
-                ProductFragment productFragment = ProductFragment.newInstance();
+                ProductFragment productFragment = ProductFragment.newInstance("Manures");
                 productFragment.setProductDataList(filterDataList);
                 ((MainActivity)getActivity()).createFragment(productFragment, "ProductFragment", true);
             }
@@ -188,14 +186,13 @@ public class ProductTypeFragment extends Fragment {
         cardVehicle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                filterDataList.clear();
                 for (i=0; i<dataList.size(); i++) {
                     if (dataList.get(i).getProduct_type().equals("VEHICLE")) {
                         filterDataList.add(dataList.get(i));
                     }
                 }
 
-                ProductFragment productFragment = ProductFragment.newInstance();
+                ProductFragment productFragment = ProductFragment.newInstance("Vehicles");
                 productFragment.setProductDataList(filterDataList);
                 ((MainActivity)getActivity()).createFragment(productFragment, "ProductFragment", true);
             }
@@ -205,14 +202,13 @@ public class ProductTypeFragment extends Fragment {
         cardEquipment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                filterDataList.clear();
                 for (i=0; i<dataList.size(); i++) {
                     if (dataList.get(i).getProduct_type().equals("EQUIPMENT")) {
                         filterDataList.add(dataList.get(i));
                     }
                 }
 
-                ProductFragment productFragment = ProductFragment.newInstance();
+                ProductFragment productFragment = ProductFragment.newInstance("Equipments");
                 productFragment.setProductDataList(filterDataList);
                 ((MainActivity)getActivity()).createFragment(productFragment, "ProductFragment", true);
             }
@@ -222,14 +218,13 @@ public class ProductTypeFragment extends Fragment {
         cardOther.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                filterDataList.clear();
                 for (i=0; i<dataList.size(); i++) {
                     if (dataList.get(i).getProduct_type().equals("OTHER")) {
                         filterDataList.add(dataList.get(i));
                     }
                 }
 
-                ProductFragment productFragment = ProductFragment.newInstance();
+                ProductFragment productFragment = ProductFragment.newInstance("Miscellaneous");
                 productFragment.setProductDataList(filterDataList);
                 ((MainActivity)getActivity()).createFragment(productFragment, "ProductFragment", true);
             }
@@ -241,7 +236,7 @@ public class ProductTypeFragment extends Fragment {
 
     private void APICall(){
         progressDialog.showDialog("Loading the products...", getContext());
-        ApiServices services = AppClient.getInstance().createService(ApiServices.class);
+        ApiServices services = AppClient.getInstance().createServiceWithAuth(ApiServices.class, getContext());
         Call<ProductListResponse> call = services.getProductList();
         call.enqueue(new Callback<ProductListResponse>() {
             @Override
@@ -252,7 +247,7 @@ public class ProductTypeFragment extends Fragment {
                     if (productListResponse != null){
                         if (productListResponse.getSuccess()) {
                             dataList.clear();
-                            dataList = productListResponse.getProductDataList();
+                            dataList.addAll(productListResponse.getProductDataList());
                         }
                     }
                 }

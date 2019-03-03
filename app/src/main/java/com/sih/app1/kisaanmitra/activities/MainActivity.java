@@ -16,6 +16,7 @@ import com.sih.app1.kisaanmitra.fragments.NewsFeedFragment;
 import com.sih.app1.kisaanmitra.fragments.ProductTypeFragment;
 import com.sih.app1.kisaanmitra.fragments.ProfileFragment;
 import com.sih.app1.kisaanmitra.fragments.ProductFragment;
+import com.sih.app1.kisaanmitra.fragments.RentFragment;
 import com.sih.app1.kisaanmitra.fragments.SchemesFragment;
 import com.sih.app1.kisaanmitra.fragments.NewsFeedFragment;
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         createFragment(newsFeedFragment, "Open News", true);
                         break;
                     case R.id.schemes:
-                        createFragment(new SchemesFragment(), "SchemesFragment", false);
+                        createFragment(new RentFragment(), "SchemesFragment", false);
                         return true;
                     case R.id.advisor:
                         createFragment(new AdvisoryFragment(), "AdvisoryFragment", false);

@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 public class ProductData implements Serializable {
 
-    @SerializedName("id")
+    @SerializedName("product_id")
     private int id;
 
     @SerializedName("name")
@@ -23,6 +23,17 @@ public class ProductData implements Serializable {
 
     @SerializedName("quantity")
     private float quantity;
+
+    @SerializedName("sell_type")
+    private String sell_type;
+
+    public String getSell_type() {
+        return sell_type;
+    }
+
+    public void setSell_type(String sell_type) {
+        this.sell_type = sell_type;
+    }
 
     @SerializedName("product_image")
     private String product_image;

@@ -1,0 +1,190 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/advisory_gradient_bg"
+    tools:context="com.sih.app1.kisaanmitra.fragments.ProductDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/product_detail_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_margin="16dp"
+            android:textStyle="bold"
+            android:textSize="24dp"/>
+
+        <ImageView
+            android:id="@+id/product_detail_img"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/product_detail_quanitity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_margin="16dp"
+            android:textSize="18dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <TextView
+                android:id="@+id/sell_price_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sell Price"
+                android:textSize="18dp"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/white"/>
+
+
+            <TextView
+                android:id="@+id/rent_price_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rent Price"
+                android:textSize="18dp"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <TextView
+                android:id="@+id/condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Condition : "
+                android:textSize="18dp"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/white"/>
+
+
+            <TextView
+                android:id="@+id/period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Condition"
+                android:layout_toEndOf="@+id/condition"
+                android:layout_alignParentEnd="true"
+                android:textSize="18dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantity required :"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:id="@+id/et_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColorHint="@color/unselected_text_color"
+            android:textColor="@color/white"
+            android:hint="Enter your quantity"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From :  "
+                android:textSize="18dp"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/white"/>
+
+
+            <TextView
+                android:id="@+id/from_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Date"
+                android:layout_toEndOf="@+id/from"
+                android:layout_alignParentEnd="true"
+                android:textSize="18dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp">
+
+            <TextView
+                android:id="@+id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To :      "
+                android:textSize="18dp"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/white"/>
+
+
+            <TextView
+                android:id="@+id/to_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Date"
+                android:layout_toEndOf="@+id/to"
+                android:textSize="18dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"
+            android:text="Proceed"/>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="45dp"/>
+        
+
+    </LinearLayout>
+
+</ScrollView>

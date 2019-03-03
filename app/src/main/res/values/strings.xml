@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">KisaanMitra</string>
     <string name="title_news">News</string>
-    <string name="title_schemes">Schemes</string>
+    <string name="title_schemes">Rentals</string>
     <string name="title_advisor">Advisor</string>
     <string name="title_ecommerce">Products</string>
     <string name="title_profile">Profile</string>
