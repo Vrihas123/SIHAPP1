@@ -4,6 +4,7 @@ package com.sih.app1.kisaanmitra.fragments;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,7 +61,7 @@ public class ProductFragment extends Fragment {
         txtHeader = view.findViewById(R.id.product_heading);
         txtHeader.setText(title);
         productAdapter = new ProductAdapter(getContext());
-        recyclerViewProducts.setLayoutManager(new GridLayoutManager(getContext(),2));
+        recyclerViewProducts.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerViewProducts.setAdapter(productAdapter);
         if (productDataList != null){
             productAdapter.setProductDataList(productDataList);

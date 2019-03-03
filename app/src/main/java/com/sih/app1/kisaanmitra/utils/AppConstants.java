@@ -38,6 +38,7 @@ public class AppConstants {
     public static final String ACCESS_TOKEN = "access_token";
     public static final String REQUEST_ADVISORY = "api/advices/all";
 
-    public static final String REQUEST_PRODUCTS = "";
-    public static final String REQUEST_PRODUCTS_AVAILABILITY = "";
+    public static final String REQUEST_PRODUCTS = "api/product/list";
+    public static final String REQUEST_PRODUCTS_AVAILABILITY = "api/rent/create";
+    public static final String REQUEST__PREVIOUS_RENT = "api/rent/list";
 }

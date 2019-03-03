@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,10 +53,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int i) {
         final ProductData data = productDataList.get(i);
         holder.productName.setText(data.getName());
-        holder.productQuantity.setText(String.valueOf(data.getQuantity()));
-        holder.sellPrice.setText(String.valueOf(data.getSell_price()));
-        if (data.getQuantity_type().equals("RENT")){
-            holder.rentPrice.setText(String.valueOf(data.getRent_price()));
+        holder.productQuantity.setText(String.valueOf(data.getQuantity()) +" " +data.getQuantity_type());
+        holder.sellPrice.setText(String.valueOf(data.getSell_price())+ " RS");
+        if (data.getSell_type().equals("RENT")){
+            holder.rentPrice.setText(String.valueOf(data.getRent_price())+" RS");
         }else {
             holder.rentPrice.setVisibility(View.GONE);
         }
@@ -85,6 +86,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     @Override
     public int getItemCount() {
+        Log.e("size====", productDataList.size()+"");
         return productDataList.size();
     }
 

@@ -7,6 +7,7 @@ import com.sih.app1.kisaanmitra.model.Authrization.RegisterRequest;
 import com.sih.app1.kisaanmitra.model.ProductListResponse;
 import com.sih.app1.kisaanmitra.model.News.NewsResponse;
 import com.sih.app1.kisaanmitra.model.ProductPostData;
+import com.sih.app1.kisaanmitra.model.RentResponse;
 import com.sih.app1.kisaanmitra.utils.AppConstants;
 
 import retrofit2.Call;
@@ -27,10 +28,15 @@ public interface ApiServices {
     @GET(AppConstants.NEWS_URL)
     Call<NewsResponse> getNews(@Query("query") String query);
 
-    @GET(AppConstants.REQUEST_PRODUCTS_AVAILABILITY)
+    @POST(AppConstants.REQUEST_PRODUCTS_AVAILABILITY)
     Call<GenericResponse> getProductAvailabilityResult(@Body ProductPostData productPostData);
+
     @POST(AppConstants.SIGN_UP_URL)
     Call<GenericResponse> requestRegister(@Body RegisterRequest registerRequest);
+
+    @GET(AppConstants.REQUEST__PREVIOUS_RENT)
+    Call<RentResponse> getPreviousRentLists();
+
 //
 //    @POST(AppConstants.SEND_OTP_URL)
 //    Call<SendOtpResponse> sendMobileNo(@Body otpSendNumber otpSendNumber);

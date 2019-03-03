@@ -9,6 +9,9 @@ public class ProductPostData implements Serializable {
     @SerializedName("product_id")
     private int product_id;
 
+    @SerializedName("quantity")
+    private float quantity;
+
     @SerializedName("start")
     private String start;
 
@@ -17,6 +20,14 @@ public class ProductPostData implements Serializable {
 
     public int getProduct_id() {
         return product_id;
+    }
+
+    public float getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(float quantity) {
+        this.quantity = quantity;
     }
 
     public void setProduct_id(int product_id) {
