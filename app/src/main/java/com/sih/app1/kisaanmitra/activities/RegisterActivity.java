@@ -33,6 +33,13 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        db = new TinyDB(this);
+
+        if(db.getBoolean(AppConstants.IS_LOGGED_IN)){
+            Intent i = new Intent(RegisterActivity.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }
 
         etFirstName = findViewById(R.id.etFirstName);
         etLastName = findViewById(R.id.etLastName);
@@ -44,7 +51,6 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
 
         registerRequest = new RegisterRequest();
-        db = new TinyDB(this);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
                             db.putString(AppConstants.EMAIL, email);
                             db.putString(AppConstants.CONTACT, contactNo);
                             //Intent to Login
-                            Toast.makeText(RegisterActivity.this, "Login Successfull", Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterActivity.this, "Register Successfull", Toast.LENGTH_LONG).show();
                             Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
                             startActivity(i);
                             finish();

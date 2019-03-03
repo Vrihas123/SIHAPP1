@@ -43,13 +43,13 @@ public class AddCropsAdapter extends RecyclerView.Adapter<AddCropsAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
         final Crop crop = crops.get(i);
         viewHolder.tvCrop.setText(crop.getProduct_name());
-        viewHolder.btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //api call for deleting a crop
-                addCrop(crop.getProduct_id());
-            }
-        });
+//        viewHolder.btnAdd.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //api call for deleting a crop
+//                addCrop(crop.getProduct_id());
+//            }
+//        });
     }
 
     @Override
@@ -57,27 +57,27 @@ public class AddCropsAdapter extends RecyclerView.Adapter<AddCropsAdapter.ViewHo
         return crops.size();
     }
 
-    public void addCrop(Integer product_id){
-        ApiServices services = AppClient.getInstance().createServiceWithAuth(ApiServices.class, context);
-        Call<CropsWrapper> call = services.addCrops(product_id);
-        call.enqueue(new Callback<CropsWrapper>() {
-            @Override
-            public void onResponse(Call<CropsWrapper> call, Response<CropsWrapper> response) {
-                if(response.isSuccessful()){
-                    if(null!=response.body()){
-                        if(response.body().getSuccess()){
-                            ProfileFragment.setData(response.body().getCrop_list());
-                        }
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<CropsWrapper> call, Throwable t) {
-
-            }
-        });
-    }
+//    public void addCrop(Integer product_id){
+//        ApiServices services = AppClient.getInstance().createServiceWithAuth(ApiServices.class, context);
+//        Call<CropsWrapper> call = services.addCrops(product_id);
+//        call.enqueue(new Callback<CropsWrapper>() {
+//            @Override
+//            public void onResponse(Call<CropsWrapper> call, Response<CropsWrapper> response) {
+//                if(response.isSuccessful()){
+//                    if(null!=response.body()){
+//                        if(response.body().getSuccess()){
+//                            ProfileFragment.setData(response.body().getCrop_list());
+//                        }
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<CropsWrapper> call, Throwable t) {
+//
+//            }
+//        });
+//    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 

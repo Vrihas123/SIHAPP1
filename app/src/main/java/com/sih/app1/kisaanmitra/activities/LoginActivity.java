@@ -71,6 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(null!=authenticationResponse){
                         db.putString(AppConstants.ACCESS_TOKEN, authenticationResponse.getToken());
                         //Intent to Main Activity
+                        db.putBoolean(AppConstants.IS_LOGGED_IN, true);
                         Intent i = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(i);
                         finish();

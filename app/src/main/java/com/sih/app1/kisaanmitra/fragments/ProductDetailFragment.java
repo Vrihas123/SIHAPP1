@@ -15,6 +15,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +47,7 @@ public class ProductDetailFragment extends Fragment{
     private EditText editTextQ;
     private ProgressBar progressBar;
     private Button proceed;
+    private RelativeLayout rl_from, rl_to;
 
     public ProductDetailFragment() {
         // Required empty public constructor
@@ -86,12 +88,18 @@ public class ProductDetailFragment extends Fragment{
         toDate = view.findViewById(R.id.to_date);
         progressBar = view.findViewById(R.id.progress);
         proceed = view.findViewById(R.id.btn_submit);
+        rl_from = view.findViewById(R.id.rlFrom);
+        rl_to = view.findViewById(R.id.rlTo);
 
-
+        if (productData.getQuantity_type().equals("BUY") || productData.getProduct_type().equals("SEED") || productData.getProduct_type().equals("MANURE")) {
+            rl_from.setVisibility(View.GONE);
+            rl_to.setVisibility(View.GONE);
+        }
         name.setText(productData.getName());
         quantity.setText(String.valueOf(productData.getQuantity())+ " " + productData.getQuantity_type());
         sellprice.setText(String.valueOf(productData.getSell_price())+" RS");
         rent.setText(String.valueOf(productData.getRent_price())+ " RS");
+        period.setText(productData.getPeriod());
         Glide.with(getContext()).load(productData.getProduct_image()).into(productImage);
 
 

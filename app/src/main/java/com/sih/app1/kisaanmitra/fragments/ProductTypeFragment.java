@@ -155,6 +155,7 @@ public class ProductTypeFragment extends Fragment {
         cardSeeds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                filterDataList.clear();
                 for (i=0; i<dataList.size(); i++) {
                     if (dataList.get(i).getProduct_type().equals("SEED")) {
                         filterDataList.add(dataList.get(i));
@@ -170,6 +171,7 @@ public class ProductTypeFragment extends Fragment {
         cardManure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                filterDataList.clear();
                 for (i=0; i<dataList.size(); i++) {
                     if (dataList.get(i).getProduct_type().equals("MANURE")) {
                         filterDataList.add(dataList.get(i));
@@ -186,6 +188,7 @@ public class ProductTypeFragment extends Fragment {
         cardVehicle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                filterDataList.clear();
                 for (i=0; i<dataList.size(); i++) {
                     if (dataList.get(i).getProduct_type().equals("VEHICLE")) {
                         filterDataList.add(dataList.get(i));
@@ -202,6 +205,7 @@ public class ProductTypeFragment extends Fragment {
         cardEquipment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                filterDataList.clear();
                 for (i=0; i<dataList.size(); i++) {
                     if (dataList.get(i).getProduct_type().equals("EQUIPMENT")) {
                         filterDataList.add(dataList.get(i));
@@ -218,6 +222,7 @@ public class ProductTypeFragment extends Fragment {
         cardOther.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                filterDataList.clear();
                 for (i=0; i<dataList.size(); i++) {
                     if (dataList.get(i).getProduct_type().equals("OTHER")) {
                         filterDataList.add(dataList.get(i));

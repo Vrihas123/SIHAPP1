@@ -41,10 +41,10 @@ public class ProfileFragment extends Fragment {
     private CropsWrapper cropsWrapper;
     private TinyDB db;
     private AddCropsAdapter addCropsAdapter;
-    private static MyCropsAdapter myCropsAdapter;
+    private MyCropsAdapter myCropsAdapter;
 
-    private static List<Crop> crops = new ArrayList<>();
-    private static List<Crop> allCrops = new ArrayList<>();
+    private List<Crop> crops = new ArrayList<>();
+    private List<Crop> allCrops = new ArrayList<>();
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -146,12 +146,12 @@ public class ProfileFragment extends Fragment {
         });
     }
 
-    public static void setData(List<Crop> cropList){
-
-        crops.clear();
-        crops.addAll(cropList);
-        myCropsAdapter.notifyDataSetChanged();
-
-    }
+//    public static void setData(List<Crop> cropList){
+//
+//        crops.clear();
+//        crops.addAll(cropList);
+//        myCropsAdapter.notifyDataSetChanged();
+//
+//    }
 
 }

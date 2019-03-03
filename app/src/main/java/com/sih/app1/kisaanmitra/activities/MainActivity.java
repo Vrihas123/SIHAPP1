@@ -2,9 +2,12 @@ package com.sih.app1.kisaanmitra.activities;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -24,11 +27,38 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationViewEx navigationView;
     private NewsFeedFragment newsFeedFragment;
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle drawerToggle;
+    private NavigationView navView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        drawerLayout = findViewById(R.id.activity_main_drawer);
+        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.app_name, R.string.app_name);
+        drawerLayout.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navView = findViewById(R.id.nv);
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                switch (id){
+                    case R.id.weather:
+                    case R.id.nearby_places:
+                    case R.id.privacy:
+                    case R.id.help_support:
+                    default:
+                        return true;
+                }
+            }
+        });
+
+
         initialize();
         loadFragment(new NewsFeedFragment());
         navigationView.enableShiftingMode(false);
@@ -62,6 +92,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+            if (drawerToggle.onOptionsItemSelected(item)) {
+                return true;
+            }
+        return super.onOptionsItemSelected(item);
+
+    }
 
     private void initialize(){
         navigationView = findViewById(R.id.navigation);
