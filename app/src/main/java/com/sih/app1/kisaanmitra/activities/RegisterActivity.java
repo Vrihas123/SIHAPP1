@@ -14,6 +14,8 @@ import com.sih.app1.kisaanmitra.model.Authrization.GenericResponse;
 import com.sih.app1.kisaanmitra.model.Authrization.RegisterRequest;
 import com.sih.app1.kisaanmitra.restapi.ApiServices;
 import com.sih.app1.kisaanmitra.restapi.AppClient;
+import com.sih.app1.kisaanmitra.utils.AppConstants;
+import com.sih.app1.kisaanmitra.utils.TinyDB;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,6 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
     private String firstName, lastName, username, email, contactNo, password, confirmpassword;
     private Button btnRegister;
     private RegisterRequest registerRequest;
+    private TinyDB db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
 
         registerRequest = new RegisterRequest();
+        db = new TinyDB(this);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +83,10 @@ public class RegisterActivity extends AppCompatActivity {
                     GenericResponse genericResponse = response.body();
                     if(genericResponse !=null){
                         if(genericResponse.getSuccess()){
+                            db.putString(AppConstants.FIRST_NAME, firstName);
+                            db.putString(AppConstants.LAST_NAME, lastName);
+                            db.putString(AppConstants.EMAIL, email);
+                            db.putString(AppConstants.CONTACT, contactNo);
                             //Intent to Login
                             Toast.makeText(RegisterActivity.this, "Login Successfull", Toast.LENGTH_LONG).show();
                             Intent i = new Intent(RegisterActivity.this, LoginActivity.class);

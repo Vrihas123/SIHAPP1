@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.sih.app1.kisaanmitra.R;
+import com.sih.app1.kisaanmitra.adapters.NewsAdapter;
 import com.sih.app1.kisaanmitra.model.News.ArticlesResponse;
 import com.sih.app1.kisaanmitra.model.News.NewsResponse;
 

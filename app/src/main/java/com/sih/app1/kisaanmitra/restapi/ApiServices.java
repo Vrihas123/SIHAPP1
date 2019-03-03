@@ -4,6 +4,7 @@ import com.sih.app1.kisaanmitra.model.Authrization.AuthenticationResponse;
 import com.sih.app1.kisaanmitra.model.Authrization.GenericResponse;
 import com.sih.app1.kisaanmitra.model.Authrization.LoginRequest;
 import com.sih.app1.kisaanmitra.model.Authrization.RegisterRequest;
+import com.sih.app1.kisaanmitra.model.CropsWrapper;
 import com.sih.app1.kisaanmitra.model.ProductListResponse;
 import com.sih.app1.kisaanmitra.model.News.NewsResponse;
 import com.sih.app1.kisaanmitra.utils.AppConstants;
@@ -25,8 +26,18 @@ public interface ApiServices {
 
     @GET(AppConstants.NEWS_URL)
     Call<NewsResponse> getNews(@Query("query") String query);
+
     @POST(AppConstants.SIGN_UP_URL)
     Call<GenericResponse> requestRegister(@Body RegisterRequest registerRequest);
+
+    @GET(AppConstants.ALL_CROPS_URL)
+    Call<CropsWrapper> getAllCrops();
+
+    @GET(AppConstants.DELETE_CROPS_URL)
+    Call<CropsWrapper> deleteCrops(@Query("crop_id") Integer id);
+
+    @GET(AppConstants.ADD_CROPS_URL)
+    Call<CropsWrapper> addCrops(@Query("crop_id") Integer id);
 //
 //    @POST(AppConstants.SEND_OTP_URL)
 //    Call<SendOtpResponse> sendMobileNo(@Body otpSendNumber otpSendNumber);
@@ -60,6 +71,8 @@ public interface ApiServices {
 //
     @POST(AppConstants.SIGN_IN_URL)
     Call<AuthenticationResponse> requestLogin(@Body LoginRequest loginRequest);
+    @GET(AppConstants.MY_CROPS_URL)
+    Call<CropsWrapper> getMyCrops();
 //
 //    @GET(AppConstants.SPONSOR_URL)
 //    Call<SponsorsResponse> getSponsorsResponce();

@@ -15,6 +15,10 @@ public class AppConstants {
 //    public static final String MESSAGE_URL = "message/";
     public static final String SIGN_IN_URL = "api/login";
     public static final String NEWS_URL = "api/news";
+    public static final String MY_CROPS_URL = "api/crop/user";
+    public static final String ALL_CROPS_URL = "api/crop/list";
+    public static final String DELETE_CROPS_URL = "api/crop/delete";
+    public static final String ADD_CROPS_URL = "api/crop/create";
 //    public static final String SPONSOR_URL ="sponsors/list/";
 //    public static final String SPLASHSCREEN_URL ="is_update_available/";
 //    public static final String RETRY_OTP_URL = "retry_otp/";
@@ -39,4 +43,8 @@ public class AppConstants {
     public static final String REQUEST_ADVISORY = "api/advices/all";
 
     public static final String REQUEST_PRODUCTS = "";
+    public static final String FIRST_NAME = "first_name";
+    public static final String LAST_NAME = "last_name";
+    public static final String CONTACT = "contact";
+    public static final String EMAIL = "email";
 }

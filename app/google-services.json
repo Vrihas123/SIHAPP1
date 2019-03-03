@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "659716674523",
+    "firebase_url": "https://sihapp1-1c25b.firebaseio.com",
+    "project_id": "sihapp1-1c25b",
+    "storage_bucket": "sihapp1-1c25b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659716674523:android:937fef38f8e793c7",
+        "android_client_info": {
+          "package_name": "com.competiton.pregnancy.kisaanmitraretailer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659716674523-ju5n2vl4vo6kp8p1amh9jc87leucendq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.competiton.pregnancy.kisaanmitraretailer",
+            "certificate_hash": "07ac1984f685d8a7714241a8021434b3c9f4318f"
+          }
+        },
+        {
+          "client_id": "659716674523-qi6kjd4m21itqhnei9vontapssvqnrgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcDwIExtl6KHWuzTl6c7H-N0ACkv4CYHw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659716674523-qi6kjd4m21itqhnei9vontapssvqnrgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
